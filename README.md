@@ -42,3 +42,9 @@ When the project is completed, commit the final changes, sync all pull requests,
 
 ###### List group responsiblities below:
 ###### Provide name and approxamite line numbers where each person wrote their code
+
+Ben : driver for takeTicket and leaveGarage methods
+      line numbers: 1-13, 22-30, 38-50, 55-65
+
+Andres : driver payForParking
+      line numbers: 15-20, 51-54
