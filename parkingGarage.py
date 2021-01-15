@@ -12,6 +12,17 @@ class ParkingGarage():
         self.tickets.remove(ticketNum)
         self.parkingSpaces.remove(ticketNum)
 
+    def payForParking(self, payTicket):
+        self.payTicket = payTicket
+        value = input("Please press any key to pay: ")
+        if value is not None:
+            self.currentTicket[payTicket] = "paid"
+            self.tickets.append(int(payTicket)) 
+            self.parkingSpaces.append(int(payTicket))
+            self.tickets.sort()
+            self.parkingSpaces.sort()
+            print("ticket has been paid and you may leave")
+
 
 
 tickets = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -33,5 +44,9 @@ def runGarage():
             else:
                 clear_output()
                 print("No parking available")
+        elif value == "pay":
+            clear_output ()
+            pay = input("What parking space would you like to pay for?: ")
+            garage.payForParking(pay)
 
 runGarage()   
