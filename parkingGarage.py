@@ -1,5 +1,3 @@
-from IPython.display import clear_output
-
 class ParkingGarage():
 
     def __init__(self, tickets, parkingSpaces, currentTicket):
@@ -42,24 +40,19 @@ def runGarage():
             if tickets != []:
                 ticketNum = tickets[0]
                 garage.takeTicket(ticketNum)
-                clear_output()
                 print("Parking available:")
                 print(tickets)
             else:
-                clear_output()
                 print("No parking available")
         elif value.lower() == "pay":
-            clear_output ()
             pay = input("What parking space would you like to pay for?: ")
             garage.payForParking(pay)
         elif value.lower() == "leave":
-            clear_output()
             ticketNum = input("What is your ticket number?: ")
             garage.leaveGarage(ticketNum)
             print("Parking available:")
             print(tickets)
         else:
-            clear_output()
             print("Command not recognized")
 
 runGarage()   
