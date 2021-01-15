@@ -33,5 +33,6 @@ def runGarage():
             else:
                 clear_output()
                 print("No parking available")
+        
 
 runGarage()   
